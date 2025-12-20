@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+  --brown:#6b3f1a;
+  --orange:#f29e4c;
+  --cream:#fff7ef;
+  --white:#ffffff;
+  --muted:#8a6b52;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:'Roboto',sans-serif;background:linear-gradient(180deg,var(--cream),#fff);color:var(--brown)}
+
+.header{display:flex;align-items:center;gap:16px;padding:18px 32px;background:linear-gradient(90deg,var(--brown),#5a3613);color:var(--white)}
+.hotel-brand{display:flex;align-items:center;gap:14px}
+.hotel-brand img{width:64px;height:64px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+.hotel-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;letter-spacing:1px}
+.hotel-sub{font-size:12px;opacity:0.9}
+
+.container{padding:28px;max-width:1100px;margin:20px auto}
+
+/* Admin page */
+.admin-panel{display:flex;gap:28px;align-items:flex-start}
+.card{background:var(--white);border-radius:12px;box-shadow:0 6px 18px rgba(107,63,26,0.12);padding:20px;flex:1}
+.input-row{display:flex;gap:12px}
+.input-row input{flex:1;padding:14px 16px;border-radius:8px;border:1px solid #e6d6c7;font-size:18px}
+.btn{background:var(--orange);color:var(--white);padding:12px 18px;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+.recent-list{margin-top:16px}
+.recent-item{display:flex;justify-content:space-between;padding:10px;border-bottom:1px dashed #f2e6db}
+
+/* Display page */
+.tv-wrap{height:calc(100vh - 110px);display:flex;flex-direction:column}
+.tv-body{flex:1;display:flex;align-items:center;justify-content:center;padding:30px}
+.order-grid{display:flex;flex-direction:column;gap:18px;width:100%;max-width:1100px}
+.order-card{display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-radius:12px;background:linear-gradient(90deg,rgba(242,158,76,0.12),rgba(107,63,26,0.03));box-shadow:0 12px 30px rgba(107,63,26,0.06)}
+.order-num{font-family:'Playfair Display',serif;font-size:48px;color:var(--brown)}
+.order-meta{text-align:right}
+.order-meta .note{font-size:18px;color:var(--muted)}
+.small{font-size:14px;color:#663f1a}
+
+.flash{animation:pop 0.9s ease}
+@keyframes pop{0%{transform:scale(0.96);opacity:0}60%{transform:scale(1.02);opacity:1}100%{transform:scale(1)}}
+
+/* responsive */
+@media (max-width:800px){.hotel-title{font-size:20px}.order-num{font-size:36px}.hotel-brand img{width:54px;height:54px}}
+
+/* fadeout used when orders are removed */
+.fadeout{opacity:0;transform:translateY(-8px);transition:all 0.35s ease}
