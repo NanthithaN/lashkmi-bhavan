@@ -23,24 +23,22 @@
       </div>
     </header>
 
-    <div class="container">
-      <div style="max-width:640px;margin:0 auto">
+    <div class="container" style="max-width:1000px">
         <div class="card">
-          <h3 style="margin-top:0">Mark Order Ready</h3>
+          <h3>Mark Order Ready</h3>
           <div class="input-row">
             <input id="orderInput" placeholder="Order number" autocomplete="off" />
-            <button id="sendBtn" class="btn">Ready</button>
+            <button id="sendBtn" class="btn" style="width:80px;height:50px;padding:5px">Ready</button>
           </div>
           <div style="margin-top:12px">
-            <input id="noteInput" placeholder="Optional note" style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%" />
+            <input id="noteInput" placeholder="Optional note" style="padding:10px;border-radius:8px;border:1px solid #eee;width:90%" />
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
             <div class="small">Ready Orders</div>
-            <button id="clearBtn" class="btn" style="background:#c35400">Clear All</button>
+            <button id="clearBtn" class="btn" style="background:#c35400;width:80px;height:50px;padding:5px">Clear All</button>
           </div>
           <div class="recent-list" id="recent"></div>
         </div>
-      </div>
     </div>
 
     <script>
@@ -87,7 +85,7 @@
 
         recent.prepend(el);
         // keep only last 12
-        while(recent.children.length>12) recent.removeChild(recent.lastChild);
+        while(recent.children.length>50) recent.removeChild(recent.lastChild);
       }
       sendBtn.addEventListener('click', () => {
         const order = orderInput.value.trim();
