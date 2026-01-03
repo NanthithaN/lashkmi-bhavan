@@ -55,10 +55,11 @@ body{margin:0;font-family:'Roboto',sans-serif;background:linear-gradient(180deg,
     align-content: start;
     width: 100%;
     height: auto;
-    max-width: 1000px;
+    max-width: 700px;
     margin-top: 250px;
     padding: 10px;
     opacity: 0.95;
+    color: var(--brown);
   }
   .order-grid::before,
 .order-grid::after{
@@ -70,10 +71,10 @@ body{margin:0;font-family:'Roboto',sans-serif;background:linear-gradient(180deg,
   justify-content:space-between;
   align-items:center;
   padding:10px 16px;
-  height:85px;
+  height:90px;
   row-gap: 8px;
   border-radius:10px;
-  background:rgba(96, 4, 4, 0.95);
+  background:var(--cream);
   box-shadow:none;
 }
 .order-card:nth-child(odd){
@@ -83,9 +84,9 @@ body{margin:0;font-family:'Roboto',sans-serif;background:linear-gradient(180deg,
 .order-card:nth-last-child(odd){
   border-radius:0 0 12px 12px;
 }
-.order-num{font-family:'Playfair Display',serif;font-size:48px;color:var(--cream);display:flex;}
+.order-num{font-family:'Playfair Display',serif;font-size:48px;color:var(--black);display:flex;}
 .order-meta{text-align:right}
-.small{font-size:14px;color:#ece6e6}
+.small{font-size:25px;color:#0c0a0a}
 
 .flash{animation:pop 0.9s ease}
 @keyframes pop{0%{transform:scale(0.96);opacity:0}60%{transform:scale(1.02);opacity:1}100%{transform:scale(1)}}
